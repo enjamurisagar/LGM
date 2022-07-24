@@ -13,6 +13,9 @@ showTasks();
 
 button.onclick = () => {
   let usertyped = input.value;
+  if(useertyped.length == 0){
+    window.alert.("Please enter a Todo")
+  }else{
   let getLocalStorage = localStorage.getItem("New Todo");
   if (getLocalStorage == null) {
     arr = [];
@@ -22,7 +25,8 @@ button.onclick = () => {
   arr.push(usertyped);
   localStorage.setItem("New Todo", JSON.stringify(arr));
   showTasks();
-};
+}
+}
 
 function showTasks() {
   let getLocalStorage = localStorage.getItem("New Todo");
