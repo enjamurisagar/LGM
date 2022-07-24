@@ -13,8 +13,8 @@ showTasks();
 
 button.onclick = () => {
   let usertyped = input.value;
-  if(useertyped.length == 0){
-    window.alert.("Please enter a Todo")
+  if(usertyped.length == 0){
+    window.alert("Please enter a Todo")
   }else{
   let getLocalStorage = localStorage.getItem("New Todo");
   if (getLocalStorage == null) {
